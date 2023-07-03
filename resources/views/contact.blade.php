@@ -94,7 +94,8 @@
                                     <div id="form-message-success" class="mb-4">
                                         Your message was sent, thank you!
                                     </div>
-                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                    <form action="{{route('contactSubmit')}}"method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
