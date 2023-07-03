@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('login');
 });
+*/
+
+Route::get('/',[LoginController::class,'index']);
+Route::post('/',[LoginController::class,'SignIn']);
+
 Route::get('contact', function () {
     return view('contact');
 });
