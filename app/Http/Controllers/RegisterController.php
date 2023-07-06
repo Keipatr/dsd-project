@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use App\Mail\CongratsMail;
+use Illuminate\Support\Facades\Mail;
+
 
 class RegisterController extends Controller
 {
@@ -33,6 +36,7 @@ class RegisterController extends Controller
         }
 
         // Registration successful
+        Mail::to($user->email)->send(new CongratsMail($user));
         return redirect()->back()->with('success', 'Account created successfully!');
     }
 }
