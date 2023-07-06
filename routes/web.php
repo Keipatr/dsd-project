@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,6 @@ Route::get('/', function () {
 Route::get('/',[LoginController::class,'index']);
 Route::post('/',[LoginController::class,'SignIn']);
 
-Route::get('contact', function () {
-    return view('contact');
-});
+Route::get('contact', [LoginController::class,'ContactPage']);
+
+Route::post('signup',[RegisterController::class,'register'])->name('register');

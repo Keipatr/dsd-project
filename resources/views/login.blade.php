@@ -1,31 +1,56 @@
-<h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+<h2>Sign in and Sign up Form</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>Create Account</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
-		</form>
+		<form id="registerForm" action="{{ route('register') }}" method="POST">
+            @csrf
+            <h1>Create Account</h1>
+
+            <!-- Display error messages -->
+            @if ($errors->any())
+			<br>
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+
+<br>
+            <input type="text" name="name" placeholder="Name" value="{{ old('name') }}" />
+            <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="password" name="password_confirmation" placeholder="Confirm Password" />
+
+            <button type="submit">Sign Up</button>
+        </form>
+
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="/" method="post">
 			@csrf
 			<h1>Sign in</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			
-			<span>or use your account</span>
+
+			 <!-- Display success message -->
+			 @if (session('success'))
+			 <br>
+				 <div class="alert alert-success">
+					 {{ session('success') }}
+				 </div>
+			 @endif
+             @if ($errors->any())
+             <br>
+                 <div class="alert alert-danger">
+                     <ul>
+                         @foreach ($errors->all() as $error)
+                             <li>{{ $error }}</li>
+                         @endforeach
+                     </ul>
+                 </div>
+             @endif
+
 			<input type="email" name="email" value="{{Session ::get('email')}}" placeholder="Email" />
 			<input type="password" name="password" placeholder="Password"/>
 			<a href="#">Forgot your password?</a>
@@ -59,6 +84,28 @@
 
 
 <style>
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    font-size: 12px; /* Adjust the font size as per your preference */
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 12px; /* Adjust the font size as per your preference */
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    font-size: 12px; /* Adjust the font size as per your preference */
+}
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
