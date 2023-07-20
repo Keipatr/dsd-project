@@ -13,6 +13,11 @@ class LoginController extends Controller
         return view('login');
     }
 
+    public function blogPage()
+    {
+        return view('blog');
+    }
+
     public function SignIn(Request $request)
     {
         Session::flash('email', $request->email);
