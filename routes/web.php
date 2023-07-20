@@ -21,6 +21,9 @@ Route::get('/', function () {
     return view('login');
 });
 */
+Route::get('z', function () {
+    return view('blog1');
+});
 
 Route::get('/',[LoginController::class,'index']);
 Route::post('/',[LoginController::class,'SignIn']);
@@ -29,8 +32,6 @@ Route::get('contact', [LoginController::class,'ContactPage']);
 Route::get('blog', [LoginController::class,'blogPage']);
 
 Route::post('signup',[RegisterController::class,'register'])->name('register');
-// Route::get('contact', function () {
-//     return view('contact');
-// });
+
 
 Route::post('contactSubmit',[contactUsController::class,'contactSubmit'])->name('contactSubmit');
