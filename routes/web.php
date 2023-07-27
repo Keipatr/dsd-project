@@ -21,9 +21,6 @@ Route::get('/', function () {
     return view('login');
 });
 */
-Route::get('z', function () {
-    return view('blog1');
-});
 
 Route::get('/',[LoginController::class,'index']);
 Route::post('/',[LoginController::class,'SignIn']);

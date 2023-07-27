@@ -1,5 +1,450 @@
-.body{
+/* Add custom CSS to override Bootstrap styles */
+/* Use Inter font for the entire page */
+body {
+    font-family: "Inter", sans-serif;
+  }
+  /* Change background color and add shadow */
+  .navbar {
+    background-color: #6B49D6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 20px; /* Add padding to the top */
+    padding-bottom: 20px; 
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  /* Center the nav items */
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  /* Set font to Inter, size to 20px, and color to white for all nav items and brand */
+  .navbar-nav .nav-link,
+  .navbar-brand {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    color: #FFFFFF; /* White color */
+  }
+  
+  /* Add underline to active nav item in the center */
+  .navbar-nav .nav-link.active {
+    position: relative;
+    color: #D9D9D9; 
+  }
+  
+  .navbar-nav .nav-link.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    height: 3px; /* Adjust this value as needed */
+    background-color: #D9D9D9; /* Gray color */
+    border-radius: 4px; /* Add border radius to the underline */
+  }
+  
+  /* Adjust spacing between right nav items */
+  .navbar-nav:last-child {
+    margin-left: 20px;
+  }
+  /* Custom styles for Register nav item */
+  .navbar-nav .nav-link.register {
+    color: #6B49D6; /* Font color for Register */
+    padding: 8px 15px; /* Add padding to create the box */
+    border: 2px solid #6B49D6; /* Add border to create the box */
+    border-radius: 10px; /* Add border radius to create the box */
+    background-color: #FFFFFF; /* White background color for Register box */
+    font-weight: bold;
+  }
+  
+  /* Hide the right nav items in small screens */
+  @media (max-width: 768px) {
+    .navbar-nav:last-child {
+      display: none;
+    }
+  }
+  
+  /* Add custom styles for the box and strokes */
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 5%; /* Add margin 5% on left and right */
+    position: relative; /* Add position relative for the container */
+  }
+  
+  .box {
+    background-color: #6B49D6;
+    padding: 20px;
+    border-radius: 15px; /* Add border radius to the box */
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  */
+    width: 95%; /* Set width to 95% to leave 5% margin on each side */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Inter', sans-serif; /* Use font Inter */
+    font-size: 58px;
+    font-weight: bold;
+    position: relative; /* Add position relative to contain the strokes */
+  }
+  
+  .strokes {
+    position: relative; /* Set position to absolute for strokes positioning */
+    top: 1%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stroke {
+    width: 3px;
+    height: 40px; /* Adjust the height of the strokes */
+    background-color: #D9D9D9; /* Color of the strokes */
+    margin-bottom: -15px; /* Add space between strokes */
+    margin-right: 15px;
+    border-radius: 6px;
+  }
+  
+  .stroke:first-child {
+    height: 30px;
+    margin-left: 25px;
+    transform: rotate(310deg); /* Rotate the first stroke */
+  }
+  
+  .stroke:nth-child(2) {
+    margin-left: 14px;
+    transform: rotate(300deg); /* Rotate the second stroke */
+  }
+  
+  .stroke:last-child {
+    height: 20px;
+    margin-left: 10px;
+    transform: rotate(290deg); /* Rotate the third stroke */
+  }
+  
+  .blog-text {
+    margin-left: 0px; /* Adjust the spacing between strokes and "Blog" text */
+  }
+  
+  /* Additional styles for the search box */
+  .search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Change the background color to white */
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: -50px; /* Adjust the spacing between the boxes */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute; /* Position the search box absolutely */
+    top: 125%; /* Position the search box at the middle vertically */
+    left: 50%; /* Position the search box in the center horizontally */
+    transform: translate(-50%, -50%); /* Center the search box */
+    
+  }
+  
+  .search-icon {
+    font-size: 24px; /* Adjust the font size for the search icon */
+    color: #929191; /* Change the color of the search icon */
+    margin-right: 15px; /* Add space between the icon and input text */
+    text-decoration: none; /* Remove underline from the icon */
+    display: flex; /* Add display flex for centering the icon */
+    align-items: center; /* Center the icon vertically */
+  }
+  
+  .search-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 0px solid #929191; /* Change the input border color */
+    color: #929191; /* Change the input font color */
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    outline: none;
+    padding: 5px;
+    width: 300px; /* Adjust the width of the input text */
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* Additional styles for responsiveness */
+  @media (max-width: 768px) {
+    .search-box {
+      flex-direction: column;
+    }
+    .search-icon {
+      margin-right: 0;
+      margin-bottom: 10px; /* Add space between the image and input text on mobile */
+    }
+    .search-input {
+      width: 100%; /* Set the width to 100% on mobile */
+    }
+  }
+  
+  
+  /* Additional styles for the list */
+  .list-container {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    margin-top: 20px; /* Adjust the spacing between the boxes */
+  }
+  
+  .horizontal-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .list-item {
+    margin: 0 10px; /* Adjust the spacing between list items */
+    padding: 8px 16px;
+    color: #757575;
+    cursor: pointer;
+  }
+  
+  .list-item.active {
+    background-color: #FFC642; /* Change the background color of the active item to #FFC642 */
+    border-radius: 20px; /* Add border radius to the active item */
+    color: #000000; /* Change the font color of the active item to black (#000000) */
+  }
+  
+  
+  /* Custom styles for the carousel cards */
+  
+  .card {
+    border-radius: 15px; /* Add border radius to the card */
+    overflow: hidden; /* Hide any content outside the rounded corners */
+  }
+  .carousel-inner .card {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .carousel-inner .card-img-right {
+    width: 640px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .carousel-inner .card-body {
+    flex: 1;
+    padding: 40px;
+  }
+  .author-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .author-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .date {
+    margin-left: 0;
+  }
+  
+  
+  /* ... previous styles ... */
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px; /* Gap between cards */
+  }
+  
+  .blog-card {
+    margin-top: 15%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 8px 4px 10px rgba(0, 0, 0, 0.25); /* Increase horizontal offset */
+  }
+  
+  .blog-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .blog-details {
+    padding: 10px;
+  }
+  
+  .category {
+    color: #6B49D6;
+    font-size: 14px;
+  }
+  
+  .blog-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .blog-short-desc {
+    font-size: 14px;
+    color: #757575;
+  }
+  
+  .author-info {
+    display: flex;
+    align-items: center;
+    color: #757575;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .author-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .date {
+    margin-top: 5px;
+  }
+  
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the pagination vertically */
+    margin-top: 20px;
+  }
+  
+  .page {
+    color: #CFCACA;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  
+  .page.active {
+    color: #FFC642; /* Change font color for the active page */
+  }
+  
+  /* Style the arrow icons */
+  .page i {
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 60%;
+    background-color: #FFC642; /* Add yellow background color for the arrow icons */
+    color: black; /* Change font color to white for better contrast */
+  }
+  
+  
+  /* Add custom styles for the footer */
+  .footer {
+    background-color: #6B49D6;
+    color: #FFFFFF;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1;
     margin-left: 10%;
     margin-right: 10%;
-}
-
+  }
+  
+  .footer-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-button {
+    background-color: white;
+    color: #6B49D6;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .footer-subtitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links li a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  .social-icons {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .icon {
+    color: #000000; /* Set icon color to black */
+    font-size: 24px;
+    margin-right: 15px; /* Add space between icons */
+  }
+  
+  /* Additional styles for responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .icon {
+      margin-right: 10px;
+    }
+  }
+  
+  /* Adjust spacing between center and right sections on larger screens */
+  @media (min-width: 769px) {
+    .footer-center {
+      margin-left: auto; /* Move the center section to the right */
+      margin-right: 20px; /* Adjust the margin to your preference */
+    }
+  }
+  
+  

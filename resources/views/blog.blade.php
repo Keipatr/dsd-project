@@ -1,161 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSD</title>
-    <link rel="stylesheet" href="{{ asset('./css/styles.css') }}">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Link to Inter font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
+    <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
+
+  <title>Blog</title>
 </head>
 
 <body>
-    <header>
-        <div
-            style="width: 1550px; height: 100px; left: 0px; top: 0px; position: absolute; background: #6B49D6; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+      <a class="navbar-brand mr-auto" href="#" style="color: white; font-weight: bold; font-size: larger;">DSD</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link  " href="#" style="color: white; font-weight: 600;">Beranda <span
+              class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="#" style="color: white; font-weight: 600;">Blog</a>
+          <a class="nav-item nav-link" href="#" style="color: white; font-weight: 600;">Lomba</a>
+          <a class="nav-item nav-link" href="#" style="color: white; font-weight: 600;">Tentang</a>
         </div>
-        <div
-            style="width: 82px; height: 5px; left: 543px; top: 57px; position: absolute; background: #D9D9D9; border-radius: 20px">
-        </div>
-        <div
-            style="width: 146px; height: 32px; left: 1206px; top: 25px; position: absolute; color: white; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Daftar</div>
-        <div
-            style="width: 112px; height: 32px; left: 558px; top: 25px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Blog</div>
-        <div
-            style="width: 118px; height: 32px; left: 680px; top: 25px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Lomba</div>
-        <div
-            style="width: 140px; height: 32px; left: 836px; top: 25px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Tentang</div>
-        <div
-            style="width: 106px; height: 32px; left: 434px; top: 25px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Home</div>
-        <div
-            style="width: 140px; height: 60px; left: 1332px; top: 18px; position: absolute; background: white; border-radius: 10px">
-        </div>
-        <div
-            style="left: 1355px; top: 25px; position: absolute; color: #6B49D6; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Masuk</div>
-        <div
-            style="left: 88px; top: 19px; position: absolute; color: white; font-size: 48px; font-family: Inter; font-weight: 800; word-wrap: break-word">
-            DSD</div>
-    </header>
-    <div class="body">
-        <div
-            style="width: 1350px; height: 240px; left: 92px; top: 215px; position: absolute; background: #6B49D6; border-radius: 20px">
-        </div>
-        <div
-            style="left: 707px; top: 313px; position: absolute; color: white; font-size: 64px; font-family: Inter; font-weight: 800; word-wrap: break-word">
-            Blog</div>
-        <div
-            style="width: 50.34px; height: 5px; left: 650.11px; top: 302.14px; position: absolute; transform: rotate(31.06deg); transform-origin: 0 0; background: #D9D9D9; border-radius: 20px">
-        </div>
-        <div
-            style="width: 35.49px; height: 5px; left: 683.47px; top: 295.64px; position: absolute; transform: rotate(39.46deg); transform-origin: 0 0; background: #D9D9D9; border-radius: 20px">
-        </div>
-        <div
-            style="width: 30.84px; height: 5px; left: 650.88px; top: 346.33px; position: absolute; transform: rotate(10.66deg); transform-origin: 0 0; background: #D9D9D9; border-radius: 20px">
-        </div>
-        <div
-            style="width: 640px; height: 96px; left: 534px; top: 435px; position: absolute; background: white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px">
-        </div>
-        <img style="width: 44px; height: 44px; left: 565px; top: 461px; position: absolute"
-            src="https://via.placeholder.com/44x44" />
-        <input type="text" placeholder="Seacrh"
-            style="left: 663px; top: 466px; position: absolute; color: #929191; font-size: 28px; font-family: Inter; font-weight: 600; word-wrap: break-word; border: none; outline:none;">
-        Search
+      </div>
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="#" style="color: white; font-weight: bold;">Daftar</a>
+        <a class="nav-item nav-link register" href="#">Masuk</a>
+      </div>
+    </nav>
+  </header>
+  <!-- box blog-->
+  <div class="box-container">
+    <div class="box">
+      <div class="strokes">
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+      </div>
+      <div class="blog-text">Blog</div>
+    </div>
+    <!-- Search box -->
+    <div class="search-box">
+      <i class="fas fa-search search-icon"></i>
+      <input style="color: #929191;" type="text" class="search-input" placeholder="Search...">
+    </div>
+  </div>
 
-        <div
-            style="left: 553px; top: 579px; position: absolute; color: #757575; font-size: 22px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Technology</div>
-        <div
-            style="left: 758px; top: 579px; position: absolute; color: #757575; font-size: 22px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Anime</div>
-        <div
-            style="left: 891px; top: 577px; position: absolute; color: #757575; font-size: 22px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            LifeStyle</div>
-        <div
-            style="left: 1056px; top: 577px; position: absolute; color: #757575; font-size: 22px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            Programming</div>
-        <div
-            style="width: 110px; height: 47px; left: 399px; top: 572px; position: absolute; background: #FFC642; border-radius: 20px">
-        </div>
-        <div
-            style="left: 438px; top: 582px; position: absolute; color: black; font-size: 22px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-            All</div>
+  <div class="list-container">
+    <ul class="horizontal-list">
+      <li class="list-item active">All</li>
+      <li class="list-item">Technology</li>
+      <li class="list-item">Hobby</li>
+      <li class="list-item">Lifestyle</li>
+      <li class="list-item">Programming</li>
+    </ul>
+  </div>
 
-        <div style="border: 1px solid black; padding: 10px;">
-            <img style="width: 671px; height: 544px; left: 106px; top: 679px; position: absolute; border-radius: 20px"
-                src="https://via.placeholder.com/671x544" />
-            <div
-                style="left: 845px; top: 711px; position: absolute; color: #6B49D6; font-size: 32px; font-family: Inter; font-weight: 700; word-wrap: break-word">
-                Technology</div>
-            <div
-                style="width: 589px; left: 845px; top: 771px; position: absolute; color: black; font-size: 43px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-                Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</div>
-            <div
-                style="width: 533px; left: 845px; top: 965px; position: absolute; color: #827F7F; font-size: 22px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-                Kami akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran
-                paradigma yang dapat mengubah cara kita hidup dan .....</div>
-            <img style="width: 82px; height: 82px; left: 842px; top: 1107px; position: absolute; border-radius: 50px"
-                src="https://via.placeholder.com/82x82" />
-            <div
-                style="left: 953px; top: 1107px; position: absolute; color: black; font-size: 22px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-                Abdul Aziz</div>
-            <div
-                style="left: 954px; top: 1148px; position: absolute; color: #8D8D8D; font-size: 18px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-                Jul 11, 2023</div>
+<br>
 
-        </div>
-        <div
-            style="width: 445px; height: 276px; left: 607px; top: 1475px; position: absolute; background: #D9D9D9; border-radius: 15px">
-        </div>
-        <div
-            style="width: 445px; height: 276px; left: 591px; top: 2300px; position: absolute; background: #D9D9D9; border-radius: 15px">
-        </div>
-        <div
-            style="width: 445px; height: 276px; left: 1106px; top: 1475px; position: absolute; background: #D9D9D9; border-radius: 15px">
-        </div>
-        <div
-            style="width: 445px; height: 276px; left: 1090px; top: 2300px; position: absolute; background: #D9D9D9; border-radius: 15px">
-        </div>
-        <div style="width: 445px; height: 714px; left: 108px; top: 1475px; position: absolute">
-            <div style="width: 445px; height: 714px; left: 0px; top: 0px; position: absolute">
-                <div
-                    style="left: 31px; top: 332px; position: absolute; color: #6B49D6; font-size: 27px; font-family: Inter; font-weight: 700; word-wrap: break-word">
-                    Technology</div>
-                <div
-                    style="left: 108px; top: 663px; position: absolute; color: #8D8D8D; font-size: 18px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-                    Jul 11, 2023</div>
-                <img style="width: 445px; height: 276px; left: 0px; top: 0px; position: absolute; border-top-left-radius: 15px; border-top-right-radius: 15px"
-                    src="https://via.placeholder.com/445x276" />
-                <div
-                    style="width: 383px; left: 31px; top: 388px; position: absolute; color: black; font-size: 24px; font-family: Inter; font-weight: 700; word-wrap: break-word">
-                    Menjelajahi Perkembangan Teknologi yang Mempengaruhi Kehidupan</div>
-                <div
-                    style="width: 414px; left: 31px; top: 486px; position: absolute; color: #5C5C5C; font-size: 24px; font-family: Inter; font-weight: 700; word-wrap: break-word">
-                    mengupas berbagai aspek teknologi yang telah merubah cara kita menjalani kehidupan sehari-hari.
-                    Mulai dari...</div>
-                <img style="width: 60px; height: 60px; left: 31px; top: 625px; position: absolute; border-radius: 50px"
-                    src="https://via.placeholder.com/60x60" />
-                <div
-                    style="left: 108px; top: 631px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">
-                    Alexander Potter</div>
-                <div
-                    style="width: 442px; height: 714px; left: 1px; top: 0px; position: absolute; box-shadow: 4px 8px 4px 1px rgba(0, 0, 0, 0.25); border-radius: 15px; border: 0.50px #FFFAFA solid">
+  <div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card">
+            <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+            <div class="card-body">
+              <h5 class="card-title" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Technology</h5>
+              <h3 class="card-title" style="color:black; font-weight: 600;">Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+              <p class="card-text" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+              <div class="author-info">
+                <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                <div class="author-text">
+                  <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                  <span class="date" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
                 </div>
+              </div>
             </div>
-            <div
-                style="left: 333px; top: 673px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-                <div
-                    style="color: #6B49D6; font-size: 24px; font-family: Inter; font-weight: 700; word-wrap: break-word">
-                    See All</div>
-            </div>
+          </div>
         </div>
+        <!-- untuk carousel item lagi -->
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
 
+  <br><br><br>
+
+  <div class="container">
+    <div class="blog-grid">
+      <!-- temp Card -->
+      <div class="blog-card">
+        <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+        <div class="blog-details">
+          <span class="category" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobby</span>
+          <h3 class="blog-title" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+          <p class="blog-short-desc" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+          <div class="author-info">
+            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+            <div class="author-text">
+              <span class="author-name" style="color:black; font-weight: bold;">Feliks Ganteng</span>
+              <span class="date" style="color:#8D8D8D; font-weight: 600;">Juli 22, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- untuk card tambahan -->
+
+      <div class="blog-card">
+        <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+        <div class="blog-details">
+          <span class="category" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobby</span>
+          <h3 class="blog-title" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+          <p class="blog-short-desc" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+          <div class="author-info">
+            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+            <div class="author-text">
+              <span class="author-name" style="color:black; font-weight: bold;">Feliks Ganteng</span>
+              <span class="date" style="color:#8D8D8D; font-weight: 600;">Juli 22, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+        <div class="blog-details">
+          <span class="category" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobby</span>
+          <h3 class="blog-title" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+          <p class="blog-short-desc" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+          <div class="author-info">
+            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+            <div class="author-text">
+              <span class="author-name" style="color:black; font-weight: bold;">Feliks Ganteng</span>
+              <span class="date" style="color:#8D8D8D; font-weight: 600;">Juli 22, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+        <div class="blog-details">
+          <span class="category" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobby</span>
+          <h3 class="blog-title" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+          <p class="blog-short-desc" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+          <div class="author-info">
+            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+            <div class="author-text">
+              <span class="author-name" style="color:black; font-weight: bold;">Feliks Ganteng</span>
+              <span class="date" style="color:#8D8D8D; font-weight: 600;">Juli 22, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+        <div class="blog-details">
+          <span class="category" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobby</span>
+          <h3 class="blog-title" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+          <p class="blog-short-desc" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+          <div class="author-info">
+            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+            <div class="author-text">
+              <span class="author-name" style="color:black; font-weight: bold;">Feliks Ganteng</span>
+              <span class="date" style="color:#8D8D8D; font-weight: 600;">Juli 22, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+        <div class="blog-details">
+          <span class="category" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobby</span>
+          <h3 class="blog-title" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+          <p class="blog-short-desc" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">kembang, dan pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+          <div class="author-info">
+            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+            <div class="author-text">
+              <span class="author-name" style="color:black; font-weight: bold;">Feliks Ganteng</span>
+              <span class="date" style="color:#8D8D8D; font-weight: 600;">Juli 22, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
+  </div>
+
+  <br><br>
+
+  <div class="pagination">
+    <a href="#" class="page"><i class="fas fa-chevron-left"></i></a>
+    <a href="#" class="page active">1</a>
+    <a href="#" class="page">2</a>
+    <a href="#" class="page ">3</a>
+    <a href="#" class="page">4</a>
+    <a href="#" class="page">5</a>
+    <a href="#" class="page"><i class="fas fa-chevron-right"></i></a>
+  </div>
+
+  <br><br><br>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <h2 class="footer-title">DSD</h2>
+      <p class="footer-desc">DSD hadir dengan konten untuk membantu meningkatkan kontrol diri, mengurangi kecemasan dan memberikan saran praktis untuk mengatasi gejala-gejala kecemasan.</p>
+      <button class="contact-button">Contact Us</button>
+    </div>
+    <div class="footer-center" style="margin-right: -25%;">
+      <h3 class="footer-subtitle">Layanan</h3>
+      <ul class="footer-links">
+        <li><a href="#">Anime</a></li>
+        <li><a href="#">Jurnal Online</a></li>
+        <li><a href="#">Komunias</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-right" style="margin-right: -0%;">
+      <h3 class="footer-subtitle">Bantuan dan Panduan</h3>
+      <ul class="footer-links">
+        <li><a href="#">Syarat dan Ketentuan</a></li>
+        <li><a href="#">Kebijakan Privasi</a></li>
+        <li><a href="#">Bantuan</a></li>
+        <li><a href="#">Tentang Kami</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
