@@ -1,0 +1,93 @@
+#informasi {
+    background-color: #6b49d6;
+    height: 700px;
+    padding: 100px;
+    color: white;
+    font-weight: bold;
+  }
+  .terkini h3 {
+    color: Black;
+    font-weight: bold;
+  }
+  .terkini {
+    background-color: white;
+    height: 150px;
+    width: 1300px;
+  }
+  
+  .navbar-nav .nav-link.register {
+    color: #6B49D6; 
+    padding: 8px 15px; 
+    border: 2px solid #6B49D6; 
+    border-radius: 10px; 
+    background-color: #FFFFFF; 
+    font-weight: bold;
+  }
+  
+  body {
+    font-family: "Inter";
+  }
+  
+  .navbar-brand {
+    font-size: 48px;
+    font-weight: 800;
+  }
+  #navbarNavDropdown li a {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  #navbarNavDropdown li a:hover {
+    text-decoration: underline;
+  }
+  #informasi-kiri {
+    font-size: 56px;
+    font-weight: 800;
+  }
+  
+  #funfact {
+    padding-top: 100px;
+    height: 700px;
+  }
+  
+  #fun-fact h6 {
+    color: #6b49d6;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  #fun-fact h4 {
+    font-size: 48px;
+    font-weight: 600;
+  }
+  .dot {
+      height: 40px;
+      width: 40px;
+      background-color: #6b49d6;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  
+  
+  #quotes h3{
+      font-weight: 800;
+      font-size: 48px;
+  }
+  #quotes h5{
+      font-weight: 600;
+      font-size: 36px;
+  }
+  
+  #posting h3{
+    color: #6b49d6;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .list-unstyled li a{
+    text-decoration:none;
+  }
+  
+  
+  
+  
+  
+  

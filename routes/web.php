@@ -33,3 +33,7 @@ Route::post('signup',[RegisterController::class,'register'])->name('register');
 // });
 
 Route::post('contactSubmit',[contactUsController::class,'contactSubmit'])->name('contactSubmit');
+
+Route::get('homepage', function () {
+    return view('homepage');
+});
