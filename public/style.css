@@ -1,93 +1,236 @@
 #informasi {
     background-color: #6b49d6;
-    height: 700px;
-    padding: 100px;
+    padding: 50px 0;
     color: white;
     font-weight: bold;
-  }
-  .terkini h3 {
-    color: Black;
+}
+#informasi-kiri {
+    color: white;
+    font-weight: 800;
+}
+#informasi h1 {
+    font-size: 56px;
+}
+
+.dotarrow {
+    height: 86px;
+    width: 93px;
+    background-color: #ffc642;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dotarrow.left {
+    position: absolute;
+    top: 45%;
+    left: -15px;
+    transform: translateY(-50%);
+}
+
+/* Add styles for dotarrow on the right */
+.dotarrow.right {
+    position: absolute;
+    top: 45%;
+    right: -15px;
+    transform: translateY(-50%);
+}
+
+.circle-content-left {
+    margin-top: -10px;
+    margin-left: -10px;
+    font-size: 64px;
     font-weight: bold;
-  }
-  .terkini {
+    color: black;
+}
+.circle-content-right {
+    margin-top: -10px;
+    margin-left: 0px;
+    font-size: 64px;
+    font-weight: bold;
+    color: black;
+}
+.terkini h3 {
+    color: black;
+    font-weight: bold;
     background-color: white;
-    height: 150px;
-    width: 1300px;
-  }
-  
-  .navbar-nav .nav-link.register {
-    color: #6B49D6; 
-    padding: 8px 15px; 
-    border: 2px solid #6B49D6; 
-    border-radius: 10px; 
-    background-color: #FFFFFF; 
+    padding: 60px;
+    border-radius: 15px;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    #informasi {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    #informasi h1 {
+        font-size: 20px;
+    }
+
+    .col-lg-6 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .col-lg-6 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .terkini {
+        text-align: center;
+    }
+
+    .position-relative {
+        position: static; /* Change to static for responsiveness */
+    }
+
+    .dotarrow.left,
+    .dotarrow.right {
+        position: absolute; /* Change to absolute for responsiveness */
+        top: 50%; /* Align the dotarrows vertically in the center */
+        transform: translateY(-50%);
+    }
+
+    .dotarrow.left {
+        left: -15px;
+    }
+
+    .dotarrow.right {
+        right: -15px;
+    }
+    .position-relative {
+        position: static; /* Change to static for responsiveness */
+      }
+    
+      .dotarrow.left,
+      .dotarrow.right {
+        position: absolute; /* Change to absolute for responsiveness */
+        top: 50%; /* Align the dotarrows vertically in the center */
+        transform: translateY(-50%);
+        height: 64px; /* Adjust the height for smaller screens */
+        width: 64px; /* Adjust the width for smaller screens */
+      }
+    
+      .dotarrow.left {
+        left: 0px; /* Adjust the left position for smaller screens */
+      }
+    
+      .dotarrow.right {
+        right: 0px; /* Adjust the right position for smaller screens */
+      }
+}
+
+.navbar-nav .nav-link.register {
+    color: #6b49d6;
+    padding: 8px 15px;
+    border: 2px solid #6b49d6;
+    border-radius: 10px;
+    background-color: #ffffff;
     font-weight: bold;
-  }
-  
-  body {
+}
+
+body {
     font-family: "Inter";
-  }
-  
-  .navbar-brand {
+}
+
+.navbar-brand {
     font-size: 48px;
     font-weight: 800;
-  }
-  #navbarNavDropdown li a {
+}
+#navbarNavDropdown li a {
     font-size: 28px;
     font-weight: 600;
-  }
-  #navbarNavDropdown li a:hover {
+}
+#navbarNavDropdown li a:hover {
     text-decoration: underline;
-  }
-  #informasi-kiri {
+}
+#informasi-kiri {
     font-size: 56px;
     font-weight: 800;
-  }
-  
-  #funfact {
+}
+
+#funfact {
     padding-top: 100px;
     height: 700px;
-  }
-  
-  #fun-fact h6 {
+}
+
+#fun-fact h6 {
     color: #6b49d6;
     font-size: 20px;
     font-weight: 600;
-  }
-  #fun-fact h4 {
+}
+#fun-fact h4 {
     font-size: 48px;
     font-weight: 600;
-  }
-  .dot {
-      height: 40px;
-      width: 40px;
-      background-color: #6b49d6;
-      border-radius: 50%;
-      display: inline-block;
-    }
-  
-  
-  #quotes h3{
-      font-weight: 800;
-      font-size: 48px;
-  }
-  #quotes h5{
-      font-weight: 600;
-      font-size: 36px;
-  }
-  
-  #posting h3{
-    color: #6b49d6;
-    font-size: 20px;
+}
+.dot {
+    height: 40px;
+    width: 40px;
+    background-color: #6b49d6;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: start;
+    margin-left: -7px;
+}
+#quotes h3 {
+    font-weight: 800;
+    font-size: 48px;
+}
+#quotes h5 {
     font-weight: 600;
-  }
-  
-  .list-unstyled li a{
-    text-decoration:none;
-  }
-  
-  
-  
-  
-  
-  
+    font-size: 36px;
+}
+
+/* Custom styles for responsiveness */
+#posting h3 {
+    font-size: 28px;
+}
+
+#posting h4 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#posting .btn {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+@media (max-width: 991px) {
+    #posting .col-6 {
+        text-align: center;
+    }
+
+    #posting .col-6 h3 {
+        font-size: 24px;
+    }
+
+    #posting .col-6 img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #posting .row > .col-6 {
+        margin-bottom: 30px;
+    }
+
+    #posting .col-4 {
+        text-align: center;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Custom styles */
+
+#fun-fact p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
