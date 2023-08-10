@@ -17,6 +17,10 @@ class LoginController extends Controller
     {
         return view('blog');
     }
+    public function addBlogPage()
+    {
+        return view('addBlog');
+    }
 
     public function SignIn(Request $request)
     {

@@ -6,7 +6,7 @@ body {
 
 /* Change background color and add shadow */
 .navbar {
-    background-color: #6B49D6;
+    background-color: #0B44AF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-top: 20px;
     /* Add padding to the top */
@@ -32,7 +32,8 @@ body {
 /* Add underline to active nav item in the center */
 .navbar-nav .nav-link.active {
     position: relative;
-    color: #D9D9D9;
+    /* color: #D9D9D9; */
+    color: white;
 }
 
 .navbar-nav .nav-link.active::before {
@@ -43,7 +44,8 @@ body {
     bottom: 5px;
     height: 3px;
     /* Adjust this value as needed */
-    background-color: #D9D9D9;
+    /* background-color: #D9D9D9; */
+    color: white;
     /* Gray color */
     border-radius: 4px;
     /* Add border radius to the underline */
@@ -56,11 +58,11 @@ body {
 
 /* Custom styles for Register nav item */
 .navbar-nav .nav-link.register {
-    color: #6B49D6;
+    color: #0B44AF;
     /* Font color for Register */
     padding: 8px 15px;
     /* Add padding to create the box */
-    border: 2px solid #6B49D6;
+    border: 2px solid #0B44AF;
     /* Add border to create the box */
     border-radius: 10px;
     /* Add border radius to create the box */
@@ -88,7 +90,7 @@ body {
 }
 
 .box {
-    background-color: #6B49D6;
+    background-color: #0B44AF;
     padding: 20px;
     border-radius: 15px;
     /* Add border radius to the box */
@@ -446,7 +448,7 @@ body {
 
 /* Add custom styles for the footer */
 .footer {
-    background-color: #6B49D6;
+    background-color: #0B44AF;
     color: #FFFFFF;
     padding: 30px;
     display: flex;
@@ -474,7 +476,7 @@ body {
 
 .contact-button {
     background-color: white;
-    color: #6B49D6;
+    color: #0B44AF;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -541,3 +543,18 @@ body {
 .icon-white {
     color: white;
   }
+
+  .workspace {
+    background-color: white;
+    margin: 10% 5%; /* Adjust margins as needed */
+    padding: 20px; /* Add padding for content within the workspace */
+    /* border: 1px solid #ccc; Add a border for visual distinction */
+    border-radius: 6px;
+}
+
+/* Apply gray margin areas */
+.addBlog {
+    background-color: #f0f0f0; /* Gray background */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}

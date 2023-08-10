@@ -27,6 +27,8 @@ Route::post('/',[LoginController::class,'SignIn']);
 
 Route::get('contact', [LoginController::class,'ContactPage']);
 Route::get('blog', [LoginController::class,'blogPage']);
+Route::get('addBlog', [LoginController::class,'addBlogPage']);
+
 
 Route::post('signup',[RegisterController::class,'register'])->name('register');
 
