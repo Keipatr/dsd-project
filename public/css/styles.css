@@ -539,22 +539,34 @@ body {
         /* Adjust the margin to your preference */
     }
 }
+
 /* Custom styles for white icons */
 .icon-white {
     color: white;
-  }
+}
 
-  .workspace {
+.workspace {
     background-color: white;
-    margin: 10% 5%; /* Adjust margins as needed */
-    padding: 20px; /* Add padding for content within the workspace */
+    margin: 10% 15%;
+
+    /* Adjust margins as needed */
+    padding: 6% 5% 1% 5%; /* top right bottom left */
+    /* Add padding for content within the workspace */
     /* border: 1px solid #ccc; Add a border for visual distinction */
     border-radius: 6px;
 }
 
 /* Apply gray margin areas */
 .addBlog {
-    background-color: #f0f0f0; /* Gray background */
-    margin: 0; /* Reset default margin */
-    padding: 0; /* Reset default padding */
+    background-color: #f0f0f0;
+    /* Gray background */
+    margin: 0;
+    /* Reset default margin */
+    padding: 0;
+    /* Reset default padding */
 }
+
+.codex-editor__redactor {
+    padding-bottom: 80px !important;
+  }
+

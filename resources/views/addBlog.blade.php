@@ -18,6 +18,9 @@
 
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
 
+    <!-- Editor.js -->
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"> --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/codex-editor.js'])
     <title>Blog</title>
 </head>
 
@@ -46,9 +49,10 @@
         </nav>
     </header>
 
-    <div class="workspace">
-        <!-- Editor.js content will go here -->
-    </div>
+    <div class="workspace" id="editorjs">
+   <!-- Editor.js content will go here -->
+</div>
+
 
     <br><br><br>
 

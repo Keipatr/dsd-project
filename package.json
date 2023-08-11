@@ -6,8 +6,21 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@editorjs/checklist": "^1.5.0",
+        "@editorjs/image": "^2.8.1",
+        "@editorjs/link": "^2.5.0",
+        "@editorjs/quote": "^2.5.0",
+        "@editorjs/raw": "^2.4.0",
+        "@editorjs/simple-image": "^1.5.1",
         "axios": "^1.1.2",
         "laravel-vite-plugin": "^0.7.5",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@editorjs/editorjs": "^2.27.2",
+        "@editorjs/embed": "^2.5.3",
+        "@editorjs/header": "^2.7.0",
+        "@editorjs/list": "^1.8.0",
+        "@editorjs/paragraph": "^2.10.0"
     }
 }
