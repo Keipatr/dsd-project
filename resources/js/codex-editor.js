@@ -4,6 +4,27 @@ import Paragraph from '@editorjs/paragraph';
 import ImageTool from '@editorjs/image';
 import List from '@editorjs/list';
 import Quote from '@editorjs/quote';
+import axios from 'axios';
+
+class CustomImageTool extends ImageTool {
+    delete() {
+        if (confirm('Are you sure you want to delete this image?')) {
+            const blockId = this.api.blocks.getCurrentBlockIndex();
+            const block = this.api.blocks.getBlockByIndex(blockId);
+            const image = block.data.file;
+
+            axios.post('/delete-image', { image: image.url })
+                .then(response => {
+                    console.log('Image deleted successfully:', response.data.message);
+                    super.delete();
+                })
+                .catch(error => {
+                    console.error('Error deleting image:', error);
+                });
+        }
+    }
+}
+
 
 const editor = new EditorJS({
     placeholder: 'Let`s write an awesome story!',
@@ -17,11 +38,21 @@ const editor = new EditorJS({
             class: Paragraph,
             inlineToolbar: true,
         },
-        image: ImageTool,
+        image: {
+            class: CustomImageTool, // Use your custom tool
+            config: {
+                endpoints: {
+                    byFile: 'upload-image',
+                },
+                additionalRequestHeaders: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                },
+            },
+        },
         list: {
             class: List,
             inlineToolbar: true
-          } ,
+        },
         quote: Quote,
     },
 });

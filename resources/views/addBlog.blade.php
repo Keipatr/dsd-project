@@ -21,6 +21,7 @@
     <!-- Editor.js -->
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"> --}}
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/codex-editor.js'])
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Blog</title>
 </head>
 

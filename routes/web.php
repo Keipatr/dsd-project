@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\contactUsController;
-
+use App\Http\Controllers\ImageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +38,6 @@ Route::post('contactSubmit',[contactUsController::class,'contactSubmit'])->name(
 Route::get('homepage', function () {
     return view('homepage');
 });
+
+Route::post('/upload-image', [ImageController::class,'upload'])->name('upload.image');
+Route::post('/delete-image', [ImageController::class,'deleteImage'])->name('delete.image');
