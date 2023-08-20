@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\contactUsController;
+use App\Http\Middleware\StudentEmailCheck;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,16 +24,12 @@ Route::get('/', function () {
 */
 
 Route::get('/',[LoginController::class,'index']);
-Route::post('/',[LoginController::class,'SignIn']);
+Route::post('/',[LoginController::class,'SignIn'])->middleware('student.email');
 
 Route::get('contact', [LoginController::class,'ContactPage']);
 Route::get('blog', [LoginController::class,'blogPage']);
-
+Route::get('homepage', [LoginController::class,'homepage']);
 Route::post('signup',[RegisterController::class,'register'])->name('register');
 
 
 Route::post('contactSubmit',[contactUsController::class,'contactSubmit'])->name('contactSubmit');
-
-Route::get('homepage', function () {
-    return view('homepage');
-});

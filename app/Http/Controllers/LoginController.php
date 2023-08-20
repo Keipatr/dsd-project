@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
+
 
 class LoginController extends Controller
 {
@@ -18,11 +21,15 @@ class LoginController extends Controller
         return view('blog');
     }
 
+    public function homepage()
+    {
+        return view('homepage');
+    }
     public function SignIn(Request $request)
     {
         Session::flash('email', $request->email);
         $request->validate([
-            'email' => 'required',
+            'email' => 'required', // Use the custom validation rule here
             'password' => 'required'
         ], [
             'email.required' => 'Email wajib diisi',
@@ -35,10 +42,11 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($infologin)) {
-            return view('contact');
+            return view('homepage');
         } else {
             return redirect()->back()->with('error', 'Wrong Email/Password to login. Please try again.');
         }
+        
     }
 
     public function ContactPage()

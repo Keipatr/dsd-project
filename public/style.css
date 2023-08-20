@@ -1,5 +1,5 @@
 #informasi {
-    background-color: #6b49d6;
+    background-color: #0b44af;
     padding: 50px 0;
     color: white;
     font-weight: bold;
@@ -104,33 +104,40 @@
     }
     .position-relative {
         position: static; /* Change to static for responsiveness */
-      }
-    
-      .dotarrow.left,
-      .dotarrow.right {
+    }
+
+    .dotarrow.left,
+    .dotarrow.right {
         position: absolute; /* Change to absolute for responsiveness */
         top: 50%; /* Align the dotarrows vertically in the center */
         transform: translateY(-50%);
         height: 64px; /* Adjust the height for smaller screens */
         width: 64px; /* Adjust the width for smaller screens */
-      }
-    
-      .dotarrow.left {
+    }
+
+    .dotarrow.left {
         left: 0px; /* Adjust the left position for smaller screens */
-      }
-    
-      .dotarrow.right {
+    }
+
+    .dotarrow.right {
         right: 0px; /* Adjust the right position for smaller screens */
-      }
+    }
 }
 
 .navbar-nav .nav-link.register {
-    color: #6b49d6;
+    color: #0b44af;
     padding: 8px 15px;
-    border: 2px solid #6b49d6;
+    border: 2px solid #0b44af;
     border-radius: 10px;
     background-color: #ffffff;
     font-weight: bold;
+}
+@media (max-width: 992px) {
+    .navbar .navbar-nav .register {
+        color: white !important;
+        background-color: #0B44AF !important;
+        margin-left: -20px;
+    }
 }
 
 body {
@@ -159,7 +166,7 @@ body {
 }
 
 #fun-fact h6 {
-    color: #6b49d6;
+    color: #0b44af;
     font-size: 20px;
     font-weight: 600;
 }
@@ -170,7 +177,7 @@ body {
 .dot {
     height: 40px;
     width: 40px;
-    background-color: #6b49d6;
+    background-color: #0b44af;
     border-radius: 50%;
     display: inline-block;
     text-align: start;

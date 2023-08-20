@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <title>Bootstrap demo</title>
+    <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 
     <!-- FONTS -->
@@ -14,45 +14,46 @@
 
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
 
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6b49d6">
-      <div class="container">
-          <a class="navbar-brand" href="#">DSD</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link text-white" aria-current="page">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Lomba</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Tentang</a>
-                  </li>
-              </ul>
-          </div>
-          <div class="justify-content-end" id="navbarNavDropdown">
-              <ul class="navbar-nav" style="display: flex">
-                  <li class="nav-item" style="padding-right: 10px">
-                      <a class="nav-link text-white" href="#">Daftar</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link register" style="background-color: white; color: #6b49d6">Masuk</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
-  
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0B44AF">
+        <div class="container">
+            <a class="navbar-brand" style="margin-right:150px;" href="#">DSD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav"> <!-- Center-align the list items -->
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog" class="nav-link text-white">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white">Lomba</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white">Tentang</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="display: flex">
+                    <li class="nav-item" style="padding-right: 10px">
+                        <a class="nav-link text-white" href="#">Daftar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link register" style="background-color: white; color: #0B44AF">Masuk</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 <section id="informasi">
   <div class="container">
@@ -144,7 +145,7 @@
 
     <section id="quotes">
         <div class="container-md mt-5">
-            <div class="p-5 row gx-5"style="background-color: #6b49d6">
+            <div class="p-5 row gx-5"style="background-color: #0B44AF">
                 <div class="col text-center mt-4 ">
                     <h3 class="text-white">Keberhasilan dimulai dari</h3>
                     <h5 class="text-white">tekad untuk mencoba, kesabaran untuk berusaha, dan <br> keyakinan untuk tidak pernah menyerah.</h5>
@@ -157,7 +158,7 @@
   <div class="container">
     <div class="p-5 row mt-5">
       <div class="col-lg-6">
-        <h3 style="font-weight: bold;color: #6b49d6;">SU ISB</h3>
+        <h3 style="font-weight: bold;color: #0B44AF;">SU ISB</h3>
         <img src="images/icon2.png" alt="" width="65">
       </div>
       <div class="row">
@@ -205,22 +206,22 @@
 
 
     <!--FOOTER-->
-    <footer style="background-color: #6b49d6;">
+    <footer style="background-color: #0B44AF;">
       <div class="container p-4">
         <div class="row">
-          <div class="col-lg-6 col-md-12 mb-4">
+          <div class="col-lg-6 col-md-12 mb-4 text-start">
             <h5 class="mb-3" style="letter-spacing: 2px; font-size: 32px; font-weight: 800; color: white;">DSD</h5>
             <p style="color: white; font-size: 14px;">DSD hadir dengan konten untuk membantu <br>meningkatkan kontrol diri, mengurangi <br>kecemasan dan memberikan saran praktis <br>untuk mengatasi gejala-gejala kecemasan.</p>
-            <button type="button" class="btn btn-light" style="color: #6b496b; font-size: 16px; font-weight: 600;">Contact Us</button>
+            <button type="button" class="btn btn-light" style="color: #0B44AF; font-size: 16px; font-weight: 600;">Contact Us</button>
           </div>
           <div class="col-lg-2 col-md-4 mb-4">
             <h5 class="mb-3" style="letter-spacing: 2px; font-size: 20px; font-weight: 700; color: white;">DSD</h5>
             <ul class="list-unstyled mb-0">
               <li class="mb-1">
-                <a href="#!" style="color: white;">Tentang Kami</a>
+                <a href="#!" style="color: white;text-decoration: none;">Tentang Kami</a>
               </li>
               <li class="mb-1">
-                <a href="#!" style="color: white;">Blog</a>
+                <a href="#!" style="color: white;text-decoration: none;">Blog</a>
               </li>
             </ul>
           </div>
@@ -228,13 +229,13 @@
             <h5 class="mb-3" style="letter-spacing: 2px; font-size: 20px; font-weight: 700; color: white;">Layanan</h5>
             <ul class="list-unstyled mb-0">
               <li class="mb-1">
-                <a href="#!" style="color: white;">Anime</a>
+                <a href="#!" style="color: white;text-decoration: none;">Anime</a>
               </li>
               <li class="mb-1">
-                <a href="#!" style="color: white;">Jurnal Online</a>
+                <a href="#!" style="color: white;text-decoration: none;">Jurnal Online</a>
               </li>
               <li class="mb-1">
-                <a href="#!" style="color: white;">Komunitas</a>
+                <a href="#!" style="color: white;text-decoration: none;">Komunitas</a>
               </li>
             </ul>
           </div>
@@ -242,24 +243,21 @@
             <h5 class="mb-3" style="letter-spacing: 2px; font-size: 20px; font-weight: 700; color: white;">Bantuan dan Panduan</h5>
             <ul class="list-unstyled mb-0">
               <li class="mb-1">
-                <a href="#!" style="color: white;">Syarat dan Ketentuan</a>
+                <a href="#!" style="color: white;text-decoration: none;">Syarat dan Ketentuan</a>
               </li>
               <li class="mb-1">
-                <a href="#!" style="color: white;">Kebijakan Privasi</a>
+                <a href="#!" style="color: white;text-decoration: none;">Kebijakan Privasi</a>
               </li>
               <li class="mb-1">
-                <a href="#!" style="color: white;">Bantuan</a>
+                <a href="#!" style="color: white;text-decoration: none;">Bantuan</a>
               </li>
             </ul>
             <div class="row">
                 <div class="col">
                     <a href="#"><img class="img-responsive" src="images/instagram.png" data-bs-hover-animate="pulse" style="padding-top:20px;padding-bottom:20px;"></a>
                 </div>
-                <div class="col">
-                    <a href="#"><img class="img-responsive" src="images/linkedin.png" data-bs-hover-animate="pulse" style="padding-top:20px;padding-bottom:20px;"></a>
-                </div>
-                <div class="col">
-                  <a href="#"><img class="img-responsive" src="images/youtube.png" data-bs-hover-animate="pulse" style="padding-top:20px;padding-bottom:20px;"></a>
+                <div class="col text-start">
+                  <a href="#"><img class="img-responsive" src="images/youtube.png" data-bs-hover-animate="pulse" style="padding-top:20px;padding-bottom:20px;margin-left:-20px;"></a>
                 </div>
             </div>
           </div>
@@ -272,5 +270,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
-
 
