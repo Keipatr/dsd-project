@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 
@@ -16,6 +16,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style.css"/>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Skrip JavaScript Anda dimulai di sini
+          let list = document.querySelector('.slider .list ');
+          let items = document.querySelectorAll('.slider .list .item');
+          let dots = document.querySelectorAll('.slider .dots li');
+          let prev = document.getElementById('prev');
+          let next = document.getElementById('next');
+
+          let active = 0;
+          let lengthItems = items.length - 1;
+
+          prev.onclick = function(){
+            if(active - 1 < 0){
+                active = lengthItems;
+            }else{
+                active = active - 1;
+            }
+            reloadSlider();
+          }
+          next.onclick = function(){
+              if(active + 1 > lengthItems){
+                  active = 0;
+              }else{
+                  active = active + 1;
+              }
+              reloadSlider();
+          }
+          let refreshSlider = setInterval (()=> {next.click()}, 3000);
+          function reloadSlider(){
+              let checkLeft = items[active].offsetLeft;
+              list.style.left = -checkLeft + 'px';
+
+              let lastActiveDot = document.querySelector('.slider .dots li.active');
+              lastActiveDot.classList.remove('active');
+              dots[active].classList.add('active');
+              clearInterval(refreshSlider);
+              refreshSlider = setInterval (()=> {next.click()}, 3000);
+          }
+          dots.forEach((li, key) =>{
+            li.addEventListener('click', function(){
+                active = key;
+                reloadSlider();
+            })
+          })
+        });
+      </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6b49d6">
@@ -52,7 +99,7 @@
           </div>
       </div>
   </nav>
-  
+
 
 <section id="informasi">
   <div class="container">
@@ -65,9 +112,46 @@
       </div>
     </div>
 
-    <div class="terkini mt-5">
-      <div class="row">
-        <div class="col mt-3 text-center position-relative"> <!-- Add position-relative class -->
+
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="images/terkini1.jpg" >
+                </div>
+                <div class="item">
+                    <img src="images/terkini2.jpg" >
+                </div>
+                <div class="item">
+                    <img src="images/terkini3.jpg" >
+                </div>
+                <div class="item">
+                    <img src="images/terkini4.jpg" >
+                </div>
+                <div class="item">
+                    <img src="images/terkini5.png" >
+                </div>
+                <div class="item">
+                    <img src="images/terkini6.jpg" >
+                </div>
+            </div>
+
+            <!--Tombol sebelum dan sesudah -->
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+
+             <!--dots -->
+             <ul class="dots">
+                <li class="active"></li>
+                <li ></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+             </ul>
+        </div>
+        {{-- <div class="col mt-3 text-center position-relative"> <!-- Add position-relative class -->
           <!-- Move the dotarrow to the left side -->
           <span class="dotarrow left">
             <div class="circle-content-left">&lt;</div>
@@ -77,9 +161,9 @@
           <span class="dotarrow right">
             <div class="circle-content-right">&gt;</div>
           </span>
-        </div>
-      </div>
-    </div>
+        </div> --}}
+
+
   </div>
 </section>
 
@@ -268,8 +352,9 @@
     </footer>
     <!-- End of Footer -->
 
+    {{-- <script src="../js/carousel.js"></script> --}}
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> --}}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
 
