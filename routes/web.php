@@ -5,6 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\contactUsController;
 use App\Http\Controllers\ImageController;
+use App\Http\Middleware\StudentEmailCheck;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,13 +25,14 @@ Route::get('/', function () {
 */
 
 Route::get('/',[LoginController::class,'index']);
-Route::post('/',[LoginController::class,'SignIn']);
+Route::post('/',[LoginController::class,'SignIn'])->middleware('student.email');
 
 Route::get('contact', [LoginController::class,'ContactPage']);
 Route::get('blog', [LoginController::class,'blogPage']);
 Route::get('addBlog', [LoginController::class,'addBlogPage']);
 
 
+Route::get('homepage', [LoginController::class,'homepage']);
 Route::post('signup',[RegisterController::class,'register'])->name('register');
 
 

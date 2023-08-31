@@ -121,7 +121,7 @@
 
       .dotarrow.right {
         right: 0px; /* Adjust the right position for smaller screens */
-      }
+    }
 }
 
 .navbar-nav .nav-link.register {
@@ -131,6 +131,13 @@
     border-radius: 10px;
     background-color: #ffffff;
     font-weight: bold;
+}
+@media (max-width: 992px) {
+    .navbar .navbar-nav .register {
+        color: white !important;
+        background-color: #0B44AF !important;
+        margin-left: -20px;
+    }
 }
 
 body {
