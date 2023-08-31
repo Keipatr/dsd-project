@@ -67,7 +67,7 @@
       </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6b49d6">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0B44AF">
       <div class="container">
           <a class="navbar-brand" href="#">DSD</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
