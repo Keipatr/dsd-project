@@ -22,9 +22,10 @@
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"> --}}
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/codex-editor.js'])
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="style.css"/>
     <title>Blog</title>
 </head>
-
+<div id="preloader"></div>
 <body class="addBlog">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-blue">
@@ -114,7 +115,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-
+    <script src="{{ asset('js/loading-asset.js') }}"></script>
 
 </body>
 

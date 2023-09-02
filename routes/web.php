@@ -38,9 +38,5 @@ Route::post('signup',[RegisterController::class,'register'])->name('register');
 
 Route::post('contactSubmit',[contactUsController::class,'contactSubmit'])->name('contactSubmit');
 
-Route::get('homepage', function () {
-    return view('homepage');
-});
-
 Route::post('/upload-image', [ImageController::class,'upload'])->name('upload.image');
 Route::post('/delete-image', [ImageController::class,'deleteImage'])->name('delete.image');

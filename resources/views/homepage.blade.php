@@ -67,48 +67,49 @@
       </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0B44AF">
-      <div class="container">
-          <a class="navbar-brand" href="#">DSD</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link text-white" aria-current="page">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Lomba</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Tentang</a>
-                  </li>
-              </ul>
-          </div>
-          <div class="justify-content-end" id="navbarNavDropdown">
-              <ul class="navbar-nav" style="display: flex">
-                  <li class="nav-item" style="padding-right: 10px">
-                      <a class="nav-link text-white" href="#">Daftar</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link register" style="background-color: white; color: #6b49d6">Masuk</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
-  <div class="container-fluid">
+  <div id="preloader"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0B44AF;">
+         <div class="container">
+             <a class="navbar-brand" style="margin-right:150px;" href="#">DSD</a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                 <ul class="navbar-nav"> <!-- Center-align the list items -->
+                     <li class="nav-item">
+                         <a class="nav-link text-white" aria-current="page">Home</a>
+                     </li>
+                     <li class="nav-item">
+                         <a href="blog" class="nav-link text-white">Blog</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link text-white">Lomba</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link text-white">Tentang</a>
+                     </li>
+                 </ul>
+             </div>
+             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                 <ul class="navbar-nav" style="display: flex">
+                     <li class="nav-item" style="padding-right: 10px">
+                         <a class="nav-link text-white" href="#">Daftar</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link register" style="background-color: white; color: #0B44AF">Masuk</a>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+     </nav>
+  <div class="container-fluid" style="background-color: #0B44AF;">
     <div class="btn-group ml-5">
-      <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #ffffff; color:#6B49D6">
+      <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #ffffff; color:#0B44AF">
         Bahasa Indonesia
     </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item change-lang" data-lang="id" style="color:#6B49D6" href="#">Bahasa Indonesia</a>
-            <a class="dropdown-item change-lang" data-lang="en" style="color:#6B49D6" href="#">English</a>
+            <a class="dropdown-item change-lang" data-lang="id" style="color:#0B44AF" href="#">Bahasa Indonesia</a>
+            <a class="dropdown-item change-lang" data-lang="en" style="color:#0B44AF" href="#">English</a>
         </div>
     </div>
 </div>
@@ -372,9 +373,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
     {{-- <script src="../js/carousel.js"></script> --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> --}}
-
+    
+    <script src="{{ asset('js/loading-asset.js') }}"></script>
   </body>
 </html>
 
