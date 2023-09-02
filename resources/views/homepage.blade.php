@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet" />
 
     <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
 
@@ -67,58 +67,47 @@
       </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0B44AF">
-      <div class="container">
-          <a class="navbar-brand" href="#">DSD</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+        <a class="navbar-brand mr-auto" href="#"
+            style="color: white; font-weight: bold; font-size: larger;">DSD</a>
+           
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link home-link" href="#" style="color: white; font-weight: 600;">Beranda <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active blog-link" href="#" style="color: white; font-weight: 600;">Blog</a>
+                <a class="nav-item nav-link competition-link" href="#" style="color: white; font-weight: 600;">Lomba</a>
+                <a class="nav-item nav-link about-link" href="#" style="color: white; font-weight: 600;">Tentang</a>
+            </div>
+        </div>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link daftar-link" href="#" style="color: white; font-weight: bold;">Daftar</a>
+            <a class="nav-item nav-link masuk-link"style="color: white; font-weight:bold;" href="#">Masuk</a>
+        </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+      <div class="btn-group ml-5">
+          <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #ffff; color:#6B49D6">
+              Bahasa Indonesia
           </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link text-white" aria-current="page">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Lomba</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white">Tentang</a>
-                  </li>
-              </ul>
-          </div>
-          <div class="justify-content-end" id="navbarNavDropdown">
-              <ul class="navbar-nav" style="display: flex">
-                  <li class="nav-item" style="padding-right: 10px">
-                      <a class="nav-link text-white" href="#">Daftar</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link register" style="background-color: white; color: #6b49d6">Masuk</a>
-                  </li>
-              </ul>
+          <div class="dropdown-menu">
+              <a class="dropdown-item change-lang" data-lang="id" style="color:#6B49D6" href="#">Bahasa Indonesia</a>
+              <a class="dropdown-item change-lang" data-lang="en" style="color:#6B49D6" href="#">English</a>
           </div>
       </div>
-  </nav>
-  <div class="container-fluid">
-    <div class="btn-group ml-5">
-      <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #ffffff; color:#6B49D6">
-        Bahasa Indonesia
-    </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item change-lang" data-lang="id" style="color:#6B49D6" href="#">Bahasa Indonesia</a>
-            <a class="dropdown-item change-lang" data-lang="en" style="color:#6B49D6" href="#">English</a>
-        </div>
-    </div>
-</div>
+  </div>
 
 
 <section id="informasi">
   <div class="container">
     <div class="row">
       <div class="col-6 d-flex align-items-center justify-content-center">
-        <h1 id="informasi-kiri">Teruskan Kembangkan Skill-Mu & Siap Jadi Talenta Digital</h1>
+        <h1 class ="head-link" id="informasi-kiri">Teruskan Kembangkan Skill-Mu & Siap Jadi Talenta Digital</h1>
       </div>
       <div class="col-6 text-lg-end">
         <img src="images/hero-image.png" alt="Responsive image" class="img-fluid"/>
@@ -191,25 +180,25 @@
                     <div class="col-1">
                         <span class="dot"></span>
                     </div>
-                    <div class="col-11">
+                    <div class="col-11 quotes1">
                         <p>Membaca dapat meningkatkan koneksi neuron dalam otak, membantu meningkatkan daya ingat, dan memperkuat kemampuan kognitif, sehingga secara keseluruhan dapat membuat Anda lebih cerdik dan pintar.</p>
                     </div>
 
                     <div class="col-1 mt-3">
                         <span class="dot"></span>
                     </div>
-                    <div class="col-11 mt-3">
+                    <div class="col-11 mt-3 quotes2">
                         <p>Aktivitas membaca melibatkan proses berpikir kritis dan analitis, memaksa otak untuk bekerja lebih keras, dan mengasah kemampuan pemecahan masalah, sehingga dapat mengembangkan kecerdasan intelektual.</p>
                     </div>
 
                     <div class="col-1 mt-3">
                         <span class="dot"></span>
                     </div>
-                    <div class="col-11 mt-3">
+                    <div class="col-11 mt-3 quotes3">
                         <p>Selain itu, membaca juga membuka pintu wawasan baru, memperluas pengetahuan, dan meningkatkan pemahaman tentang berbagai topik, yang pada gilirannya dapat membantu Anda menjadi individu yang lebih berpengetahuan dan berpikiran terbuka.</p>
                     </div>
                     <div class="col-12 mt-3 text-center">
-                        <button type="button" class="btn btn-warning">Selengkapnya</button>
+                        <button type="button" class="btn btn-warning selengkapnya-link">Selengkapnya</button>
                     </div>
                 </div>
             </div>
@@ -243,8 +232,8 @@
         <div class="container-md mt-5">
             <div class="p-5 row gx-5"style="background-color: #0B44AF">
                 <div class="col text-center mt-4 ">
-                    <h3 class="text-white">Keberhasilan dimulai dari</h3>
-                    <h5 class="text-white">tekad untuk mencoba, kesabaran untuk berusaha, dan <br> keyakinan untuk tidak pernah menyerah.</h5>
+                    <h3 class="text-white quotes4">Keberhasilan dimulai dari</h3>
+                    <h5 class="text-white quotes5">tekad untuk mencoba, kesabaran untuk berusaha, dan <br> keyakinan untuk tidak pernah menyerah.</h5>
                 </div>
             </div>
         </div>
@@ -259,9 +248,9 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <h4 class="text-secondary">Temukan Postingan dan Info terbaru lewat <br> instaragam Student Union ISB</h4>
+          <h4 class="text-secondary perintah-link">Temukan Postingan dan Info terbaru lewat <br> instaragam Student Union ISB</h4>
           <button class="btn mt-3 btn-outline-primary d-flex align-items-center mt-5" style="color: black;">
-            <i class="fa fa-instagram" style="font-size: 32px; color: black; margin-right: 10px;"></i> uc_suisb
+            <i class="fab fa-instagram" style="font-size: 32px; color: black; margin-right: 10px;"></i> uc_suisb
           </button>
         </div>
         <div class="col-lg-6 mt-4">
@@ -302,63 +291,35 @@
 
 
     <!--FOOTER-->
-    <footer style="background-color: #0B44AF;">
-      <div class="container p-4">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 mb-4 text-start">
-            <h5 class="mb-3" style="letter-spacing: 2px; font-size: 32px; font-weight: 800; color: white;">DSD</h5>
-            <p style="color: white; font-size: 14px;">DSD hadir dengan konten untuk membantu <br>meningkatkan kontrol diri, mengurangi <br>kecemasan dan memberikan saran praktis <br>untuk mengatasi gejala-gejala kecemasan.</p>
-            <button type="button" class="btn btn-light" style="color: #0B44AF; font-size: 16px; font-weight: 600;">Contact Us</button>
-          </div>
-          <div class="col-lg-2 col-md-4 mb-4">
-            <h5 class="mb-3" style="letter-spacing: 2px; font-size: 20px; font-weight: 700; color: white;">DSD</h5>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1">
-                <a href="#!" style="color: white;text-decoration: none;">Tentang Kami</a>
-              </li>
-              <li class="mb-1">
-                <a href="#!" style="color: white;text-decoration: none;">Blog</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 mb-4">
-            <h5 class="mb-3" style="letter-spacing: 2px; font-size: 20px; font-weight: 700; color: white;">Layanan</h5>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1">
-                <a href="#!" style="color: white;text-decoration: none;">Anime</a>
-              </li>
-              <li class="mb-1">
-                <a href="#!" style="color: white;text-decoration: none;">Jurnal Online</a>
-              </li>
-              <li class="mb-1">
-                <a href="#!" style="color: white;text-decoration: none;">Komunitas</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-md-4 mb-4">
-            <h5 class="mb-3" style="letter-spacing: 2px; font-size: 20px; font-weight: 700; color: white;">Bantuan dan Panduan</h5>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1">
-                <a href="#!" style="color: white;text-decoration: none;">Syarat dan Ketentuan</a>
-              </li>
-              <li class="mb-1">
-                <a href="#!" style="color: white;text-decoration: none;">Kebijakan Privasi</a>
-              </li>
-              <li class="mb-1">
-                <a href="#!" style="color: white;text-decoration: none;">Bantuan</a>
-              </li>
-            </ul>
-            <div class="row">
-                <div class="col">
-                    <a href="#"><img class="img-responsive" src="images/instagram.png" data-bs-hover-animate="pulse" style="padding-top:20px;padding-bottom:20px;"></a>
-                </div>
-                <div class="col text-start">
-                  <a href="#"><img class="img-responsive" src="images/youtube.png" data-bs-hover-animate="pulse" style="padding-top:20px;padding-bottom:20px;margin-left:-20px;"></a>
-                </div>
-            </div>
-          </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <h2 class="footer-title footer-title-link">DSD</h2>
+            <p class="footer-desc footer-desc-link">DSD hadir dengan konten untuk membantu meningkatkan kontrol diri, mengurangi
+                kecemasan dan memberikan saran praktis untuk mengatasi gejala-gejala kecemasan.</p>
+            <button class="contact-button contact-button-link">Hubungi Kami</button>
         </div>
-      </div>
+        <div class="footer-center" style="margin-right: -25%;">
+            <h3 class="footer-subtitle footer-subtitle-link">Layanan</h3>
+            <ul class="footer-links">
+                <li><a class ="anime-link" href="#">Anime</a></li>
+                <li><a class ="Jurnal-link" href="#">Jurnal Online</a></li>
+                <li><a class ="Komunitas-link" href="#">Komuntias</a></li>
+                <li><a class ="Blog-link" href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-right" style="margin-right: -0%;">
+            <h3 class="footer-subtitle panduan-link ">Bantuan dan Panduan</h3>
+            <ul class="footer-links">
+                <li><a class ="Syarat-link" href="#">Syarat dan Ketentuan</a></li>
+                <li><a class ="Kebijakan-link" href="#">Kebijakan Privasi</a></li>
+                <li><a class ="Bantuan-link" href="#">Bantuan</a></li>
+                <li><a class ="Tentang-link" href="#">Tentang Kami</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/uc_suisb/" target="_blank" class="icon-white" style="margin-right: 10px;"><i class="fab fa-instagram" style="font-size: 24px;"></i></a>
+                <a href="#" class="icon-white" style="margin-right: 10px;"><i class="fab fa-youtube" style="font-size: 24px;"></i></a>
+              </div>
+        </div>
     </footer>
     <!-- End of Footer -->
 

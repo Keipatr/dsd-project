@@ -287,7 +287,7 @@
             </ul>
         </div>
         <div class="footer-right" style="margin-right: -0%;">
-            <h3 class="footer-subtitle">Bantuan dan Panduan</h3>
+            <h3 class="footer-subtitle panduan-link">Bantuan dan Panduan</h3>
             <ul class="footer-links">
                 <li><a class ="Syarat-link" href="#">Syarat dan Ketentuan</a></li>
                 <li><a class ="Kebijakan-link" href="#">Kebijakan Privasi</a></li>

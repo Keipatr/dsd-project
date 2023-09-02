@@ -223,19 +223,76 @@
     }
 }
 
+.navbar {
+    background-color: #0B44AF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 20px;
+    /* Add padding to the top */
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Center the nav items */
+.navbar-nav {
+    text-align: center;
+}
+
+/* Set font to Inter, size to 20px, and color to white for all nav items and brand */
+.navbar-nav .nav-link,
+.navbar-brand {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    /* White color */
+}
+
+/* Add underline to active nav item in the center */
+.navbar-nav .nav-link.active {
+    position: relative;
+    /* color: #D9D9D9; */
+    color: white;
+}
+
+.navbar-nav .nav-link.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    height: 3px;
+    /* Adjust this value as needed */
+    /* background-color: #D9D9D9; */
+    color: white;
+    /* Gray color */
+    border-radius: 4px;
+    /* Add border radius to the underline */
+}
+
+/* Adjust spacing between right nav items */
+.navbar-nav:last-child {
+    margin-left: 20px;
+}
+
+/* Custom styles for Register nav item */
 .navbar-nav .nav-link.register {
     color: #0B44AF;
+    /* Font color for Register */
     padding: 8px 15px;
+    /* Add padding to create the box */
     border: 2px solid #0B44AF;
+    /* Add border to create the box */
     border-radius: 10px;
-    background-color: #ffffff;
+    /* Add border radius to create the box */
+    background-color: #FFFFFF;
+    /* White background color for Register box */
     font-weight: bold;
 }
-@media (max-width: 992px) {
-    .navbar .navbar-nav .register {
-        color: white !important;
-        background-color: #0B44AF !important;
-        margin-left: -20px;
+
+/* Hide the right nav items in small screens */
+@media (max-width: 768px) {
+    .navbar-nav:last-child {
+        display: none;
     }
 }
 
@@ -243,17 +300,7 @@ body {
     font-family: "Inter";
 }
 
-.navbar-brand {
-    font-size: 48px;
-    font-weight: 800;
-}
-#navbarNavDropdown li a {
-    font-size: 28px;
-    font-weight: 600;
-}
-#navbarNavDropdown li a:hover {
-    text-decoration: underline;
-}
+
 #informasi-kiri {
     font-size: 56px;
     font-weight: 800;
@@ -339,4 +386,83 @@ body {
 #fun-fact p {
     font-size: 16px;
     margin-bottom: 0;
+}
+
+
+.footer {
+    background-color: #0B44AF;
+    color: #FFFFFF;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.footer-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.footer-desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+}.footer-subtitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+}
+
+/* Adjust spacing between center and right sections on larger screens */
+@media (min-width: 769px) {
+    .footer-center {
+        margin-left: auto;
+        /* Move the center section to the right */
+        margin-right: 20px;
+        /* Adjust the margin to your preference */
+    }
+}
+.contact-button {
+    background-color: white;
+    color: #0B44AF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.icon-white {
+    color: white;
 }
