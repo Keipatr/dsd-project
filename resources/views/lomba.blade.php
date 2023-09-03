@@ -14,11 +14,11 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="css/stylesLomba.css">
 
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
 
-    <title>Blog</title>
+    <title>Lomba</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                 <div class="navbar-nav">
                     <a class="nav-item nav-link home-link" href="homepage" style="color: white; font-weight: 600;">Beranda <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link active blog-link" href="blog" style="color: white; font-weight: 600;">Blog</a>
-                    <a class="nav-item nav-link competition-link" href="lomba" style="color: white; font-weight: 600;">Lomba</a>
+                    <a class="nav-item nav-link competition-link" href="#" style="color: white; font-weight: 600;">Lomba</a>
                     <a class="nav-item nav-link about-link" href="#" style="color: white; font-weight: 600;">Tentang</a>
                 </div>
             </div>
@@ -45,17 +45,7 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid">
-        <div class="btn-group ml-5">
-            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #ffff; color:#6B49D6">
-                Bahasa Indonesia
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item change-lang" data-lang="id" style="color:#6B49D6" href="#">Bahasa Indonesia</a>
-                <a class="dropdown-item change-lang" data-lang="en" style="color:#6B49D6" href="#">English</a>
-            </div>
-        </div>
-    </div>
+    
     
     <!-- box blog-->
     <div class="box-container">
@@ -65,7 +55,7 @@
                 <div class="stroke"></div>
                 <div class="stroke"></div>
             </div>
-            <div class="blog-text">Blog</div>
+            <div class="blog-text">Lomba</div>
         </div>
         <!-- Search box -->
         <div class="search-box">
@@ -76,40 +66,17 @@
 
     <div class="list-container">
         <ul class="horizontal-list">
-            <li class="list-item active semua-link">Semua</li>
-            <li class="list-item teknologi-link">Teknologi</li>
-            <li class="list-item hobi-link">Hobi</li>
-            <li class="list-item lifestyle-link">Lifestyle</li>
-            <li class="list-item pemrograman-link">Pemrograman</li>
+            <li class="list-item semua-link">Semua</li>
+            <li class="list-item active teknologi-link">UI/UX Design</li>
+            <li class="list-item hobi-link">Design Poster</li>
+            <li class="list-item lifestyle-link">Bussiness IT Case</li>
+            <li class="list-item pemrograman-link">National Essay</li>
         </ul>
     </div>
 
     <br>
 
-    <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="card">
-                        <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
-                        <div class="card-body">
-                            <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
-                                Teknologi</h5>
-                            <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
-                                Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
-                            <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
-                                pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
-                                dapat mengubah cara kita hidup dan .....</p>
-                            <div class="author-info">
-                                <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
-                                <div class="author-text">
-                                    <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
-                                    <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    
                 <!-- untuk carousel item lagi -->
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -130,13 +97,11 @@
             <!-- Blog Card 1 -->
             <div class="blog-card-container">
                 <div class="blog-card">
-                    <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+                    <img src="./image/lomba/contoh1.jpg" class="blog-img" alt="Blog Image">
                     <div class="blog-content">
-                        <span class="category category-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobi</span>
-                        <h3 class="blog-title blog-title-link" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
-                        <p class="blog-short-desc blog-short-desc-link" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami
-                            akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan
-                            pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+                        <span class="category category-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Ui/UX Design</span>
+                        <h3 class="blog-title blog-title-link" style="color:black; font-weight: bold; margin-bottom: 10px;">Lomba Design Website</h3>
+                        <p class="blog-short-desc blog-short-desc-link" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ipsum quia ab atque. Molestias, maxime. Corrupti hic quis dolorem reiciendis.</p>
                     </div>
                     <div class="author-info">
                         <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
@@ -149,15 +114,12 @@
             </div>
             <div class="blog-card-container">
                 <div class="blog-card">
-                    <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+                    <img src="./image/lomba/contoh2.jpg" class="blog-img" alt="Blog Image">
                     <div class="blog-content">
                         <span class="category category-link2"
-                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobi</span>
-                        <h3 class="blog-title blog-title-link2" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan
-                            Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
-                        <p class="blog-short-desc blog-short-desc-link2" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami
-                            akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan
-                            pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Ui/UX Design</span>
+                        <h3 class="blog-title blog-title-link2" style="color:black; font-weight: bold; margin-bottom: 10px;">Lomba Design Website</h3>
+                        <p class="blog-short-desc blog-short-desc-link2" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste culpa officia, impedit libero pariatur rerum. Esse natus ullam voluptas nemo.</p>
                     </div>
                     <div class="author-info">
                         <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
@@ -170,15 +132,12 @@
             </div>
             <div class="blog-card-container">
                 <div class="blog-card">
-                    <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+                    <img src="./image/lomba/contoh3.jpg" class="blog-img" alt="Blog Image">
                     <div class="blog-content">
                         <span class="category category-link3"
-                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobi</span>
-                        <h3 class="blog-title blog-title-link3" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan
-                            Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
-                        <p class="blog-short-desc blog-short-desc-link3" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami
-                            akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan
-                            pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Ui/UX Design</span>
+                        <h3 class="blog-title blog-title-link3" style="color:black; font-weight: bold; margin-bottom: 10px;">Lomba Design Website</h3>
+                        <p class="blog-short-desc blog-short-desc-link3" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti aliquam assumenda esse nisi accusantium quas illo quibusdam nemo qui amet</p>
                     </div>
                     <div class="author-info">
                         <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
@@ -191,15 +150,12 @@
             </div>
             <div class="blog-card-container">
                 <div class="blog-card">
-                    <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+                    <img src="./image/lomba/contoh4.jpg" class="blog-img" alt="Blog Image">
                     <div class="blog-content">
                         <span class="category category-link4"
-                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobi</span>
-                        <h3 class="blog-title blog-title-link4" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan
-                            Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
-                        <p class="blog-short-desc blog-short-desc-link4" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami
-                            akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan
-                            pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Ui/UX Design</span>
+                        <h3 class="blog-title blog-title-link4" style="color:black; font-weight: bold; margin-bottom: 10px;">Lomba Design Website</h3>
+                        <p class="blog-short-desc blog-short-desc-link4" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro eligendi architecto maxime accusamus hic consectetur ipsum, excepturi facere reiciendis quos</p>
                     </div>
                     <div class="author-info">
                         <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
@@ -212,15 +168,12 @@
             </div>
             <div class="blog-card-container">
                 <div class="blog-card">
-                    <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+                    <img src="./image/lomba/contoh5.jpg"class="blog-img" alt="Blog Image">
                     <div class="blog-content">
                         <span class="category category-link5"
-                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobi</span>
-                        <h3 class="blog-title blog-title-link5" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan
-                            Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
-                        <p class="blog-short-desc blog-short-desc-link5" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami
-                            akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan
-                            pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Ui/UX Design</span>
+                        <h3 class="blog-title blog-title-link5" style="color:black; font-weight: bold; margin-bottom: 10px;">Lomba Design Website</h3>
+                        <p class="blog-short-desc blog-short-desc-link5" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, libero! Commodi autem maiores corporis! Omnis, ex eos. Rem, quod libero.</p>
                     </div>
                     <div class="author-info">
                         <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
@@ -233,15 +186,12 @@
             </div>
             <div class="blog-card-container">
                 <div class="blog-card">
-                    <img src="./image/blog/Rectangle 20.png" class="blog-img" alt="Blog Image">
+                    <img src="./image/lomba/contoh6.jpg" class="blog-img" alt="Blog Image">
                     <div class="blog-content">
                         <span class="category category-link6"
-                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Hobi</span>
-                        <h3 class="blog-title blog-title-link6" style="color:black; font-weight: bold; margin-bottom: 10px;">Masa Depan
-                            Digital: Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
-                        <p class="blog-short-desc blog-short-desc-link6" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Kami
-                            akan memperkenalkan Anda pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan
-                            pergeseran paradigma yang dapat mengubah cara kita hidup dan .....</p>
+                            style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">Ui/UX Design</span>
+                        <h3 class="blog-title blog-title-link6" style="color:black; font-weight: bold; margin-bottom: 10px;">Lomba Design Website</h3>
+                        <p class="blog-short-desc blog-short-desc-link6" style="color:#5C5C5C; font-weight: bold; margin-bottom: 10px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, exercitationem sit consequuntur odio saepe tempore ea deserunt dolores temporibus magni</p>
                     </div>
                     <div class="author-info">
                         <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
@@ -302,7 +252,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/language-switcherBlog.js"> </script>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>

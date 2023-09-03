@@ -2,7 +2,6 @@
 /* Use Inter font for the entire page */
 body {
     font-family: "Inter", sans-serif;
-    text-align: left;
 }
 
 /* Change background color and add shadow */

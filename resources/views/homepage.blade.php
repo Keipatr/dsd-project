@@ -79,8 +79,8 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link home-link" href="#" style="color: white; font-weight: 600;">Beranda <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link active blog-link" href="#" style="color: white; font-weight: 600;">Blog</a>
-                <a class="nav-item nav-link competition-link" href="#" style="color: white; font-weight: 600;">Lomba</a>
+                <a class="nav-item nav-link active blog-link" href="blog" style="color: white; font-weight: 600;">Blog</a>
+                <a class="nav-item nav-link competition-link" href="lomba" style="color: white; font-weight: 600;">Lomba</a>
                 <a class="nav-item nav-link about-link" href="#" style="color: white; font-weight: 600;">Tentang</a>
             </div>
         </div>

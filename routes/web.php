@@ -44,3 +44,7 @@ Route::get('homepage', function () {
 
 Route::post('/upload-image', [ImageController::class,'upload'])->name('upload.image');
 Route::post('/delete-image', [ImageController::class,'deleteImage'])->name('delete.image');
+
+Route::get('lomba', function () { 
+    return view('lomba');
+});

@@ -12,6 +12,12 @@
     font-size: 56px;
 }
 
+
+.social-icons{
+    display: flex;
+    margin-top: 20px;
+}
+
 .slider{
     width: 1300px;
     max-width: 70vw;
