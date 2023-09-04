@@ -212,6 +212,112 @@ body {
     font-weight: 600;
 }
 
+.slider{
+    width: 900px;
+    max-width: 70vw;
+    height: 300px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.list .card{
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card{
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.333);
+    color: #ffffff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.buttons button:hover{
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.333);
+}
+.dots{
+    position: absolute;
+    bottom: 10px;
+    color: #ffffff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.dots li.active{
+    width: 30px;
+}
+
 /* Additional styles for responsiveness */
 @media (max-width: 768px) {
     .search-box {
@@ -274,18 +380,44 @@ body {
     /* Hide any content outside the rounded corners */
 }
 
-.carousel-inner .card {
+.carousel-container {
     display: flex;
-    flex-direction: row;
+    position: relative;
+    /* width: 1300px; */
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
 }
 
-.carousel-inner .card-img-right {
+.carousel-innerr {
+    gap: 4;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    max-width: max-content;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.carousel-innerr .card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-width: 100%;
+}
+
+.carousel-innerr .card-img-right {
     width: 640px;
     height: 400px;
     object-fit: cover;
 }
 
-.carousel-inner .card-body {
+.carousel-innerr .card-body {
     flex: 1;
     padding: 40px;
 }
@@ -547,7 +679,7 @@ body {
 
 .workspace {
     background-color: white;
-    margin: 10% 15%; 
+    margin: 10% 15%;
 
     /* Adjust margins as needed */
     padding: 6% 5% 1% 5%; /* top right bottom left */

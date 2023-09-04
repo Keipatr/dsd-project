@@ -19,6 +19,55 @@
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
 
     <title>Blog</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Skrip JavaScript Anda dimulai di sini
+          let list = document.querySelector('.carousel-container .carousel-innerr ');
+          let items = document.querySelectorAll('.carousel-container .carousel-innerr .item');
+          let dots = document.querySelectorAll('.carousel-container .dots li');
+          let prev = document.getElementById('prev');
+          let next = document.getElementById('next');
+
+          let active = 0;
+          let lengthItems = items.length - 1;
+
+          prev.onclick = function(){
+            if(active - 1 < 0){
+                active = lengthItems;
+                console.log(items.length)
+            }else{
+                active = active - 1;
+                console.log(items.length)
+            }
+            reloadSlider();
+          }
+          next.onclick = function(){
+              if(active + 1 > lengthItems){
+                  active = 0;
+              }else{
+                  active = active + 1;
+              }
+              reloadSlider();
+          }
+          let refreshSlider = setInterval (()=> {next.click()}, 3000);
+          function reloadSlider(){
+              let checkLeft = items[active].offsetLeft;
+              list.style.left = -checkLeft + 'px';
+
+              let lastActiveDot = document.querySelector('.carousel-container .dots li.active');
+              lastActiveDot.classList.remove('active');
+              dots[active].classList.add('active');
+              clearInterval(refreshSlider);
+              refreshSlider = setInterval (()=> {next.click()}, 3000);
+          }
+          dots.forEach((li, key) =>{
+            li.addEventListener('click', function(){
+                active = key;
+                reloadSlider();
+            })
+          })
+        });
+      </script>
 </head>
 
 <body>
@@ -26,7 +75,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-blue">
             <a class="navbar-brand mr-auto" href="#"
                 style="color: white; font-weight: bold; font-size: larger;">DSD</a>
-               
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,7 +105,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- box blog-->
     <div class="box-container">
         <div class="box">
@@ -87,10 +136,127 @@
     <br>
 
     <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="card">
+        {{-- <div class="list">
+            <div class="item">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                                <div class="card-body">
+                                    <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                                        Teknologi</h5>
+                                    <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                                        Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                                    <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                                        pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                                        dapat mengubah cara kita hidup dan .....</p>
+                                    <div class="author-info">
+                                        <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                                        <div class="author-text">
+                                            <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                            <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- untuk carousel item lagi -->
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                            Teknologi</h5>
+                        <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                            Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                        <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                            pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                            dapat mengubah cara kita hidup dan .....</p>
+                        <div class="author-info">
+                            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                            <div class="author-text">
+                                <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                            Teknologi</h5>
+                        <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                            Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                        <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                            pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                            dapat mengubah cara kita hidup dan .....</p>
+                        <div class="author-info">
+                            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                            <div class="author-text">
+                                <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                            Teknologi</h5>
+                        <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                            Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                        <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                            pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                            dapat mengubah cara kita hidup dan .....</p>
+                        <div class="author-info">
+                            <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                            <div class="author-text">
+                                <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Tombol sebelum dan sesudah -->
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+         <!--dots -->
+         <ul class="dots">
+            <li class="active"></li>
+            <li ></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul> --}}
+
+         <div class="carousel-container">
+            <div class="carousel-innerr">
+
+                    <div class="card item">
                         <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
                         <div class="card-body">
                             <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
@@ -109,9 +275,127 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- untuk carousel item lagi -->
+                    <div class="card item">
+                        <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                        <div class="card-body">
+                            <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                                Teknologi</h5>
+                            <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                                Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                            <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                                pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                                dapat mengubah cara kita hidup dan .....</p>
+                            <div class="author-info">
+                                <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                                <div class="author-text">
+                                    <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                    <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                        <div class="card-body">
+                            <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                                Teknologi</h5>
+                            <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                                Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                            <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                                pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                                dapat mengubah cara kita hidup dan .....</p>
+                            <div class="author-info">
+                                <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                                <div class="author-text">
+                                    <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                    <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                        <div class="card-body">
+                            <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                                Teknologi</h5>
+                            <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                                Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                            <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                                pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                                dapat mengubah cara kita hidup dan .....</p>
+                            <div class="author-info">
+                                <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                                <div class="author-text">
+                                    <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                    <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                        <div class="card-body">
+                            <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                                Teknologi</h5>
+                            <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                                Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                            <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                                pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                                dapat mengubah cara kita hidup dan .....</p>
+                            <div class="author-info">
+                                <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                                <div class="author-text">
+                                    <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                    <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="./image/blog/Rectangle 20.png" class="card-img-right" alt="Image">
+                        <div class="card-body">
+                            <h5 class="card-title cTeknologi-link" style="color:#6B49D6; font-weight: bold; margin-bottom: 10px;">
+                                Teknologi</h5>
+                            <h3 class="card-title judul-link" style="color:black; font-weight: 600;">Masa Depan Digital:
+                                Menjelajahi Dunia Teknologi yang Tak Terbatas</h3>
+                            <p class="card-text paragraf-link" style="color:#827F7F; font-weight: 600;">Kami akan memperkenalkan Anda
+                                pada inovasi-inovasi terbaru, tren yang sedang berkembang, dan pergeseran paradigma yang
+                                dapat mengubah cara kita hidup dan .....</p>
+                            <div class="author-info">
+                                <img src="./image/blog/Rectangle 21.png" class="author-img" alt="Author">
+                                <div class="author-text">
+                                    <span class="author-name" style="color:black; font-weight: 600;">Abdul Aziz</span>
+                                    <span class="date date-link0" style="color:#8D8D8D; font-weight: 600;">Juli 11, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+            <!-- untuk carousel item lagi -->
             </div>
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+
+             <!--dots -->
+             <ul class="dots">
+                <li class="active"></li>
+                <li ></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+             </ul>
+        </div>
+        {{-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -120,7 +404,9 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </div> --}}
+
+
     </div>
 
     <br><br><br>

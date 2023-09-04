@@ -33,8 +33,10 @@
           prev.onclick = function(){
             if(active - 1 < 0){
                 active = lengthItems;
+                console.log(items.length)
             }else{
                 active = active - 1;
+                console.log(items.length)
             }
             reloadSlider();
           }
